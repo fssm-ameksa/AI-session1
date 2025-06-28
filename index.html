@@ -69,19 +69,8 @@
             }, 1000);
         }
 
-        let penaltyApplied = false;
-        document.addEventListener('visibilitychange', function () {
-            if (document.hidden && !penaltyApplied) {
-                penaltyApplied = true;
-                handlePenalty();
-            }
-        });
+ 
 
-        function handlePenalty() {
-            alert("il est interdit de quitter la page. Vous avez perdu 5 minutes de votre temps.");
-            totalTime -= 5 * 60; // Apply a 5-minute penalty
-            penaltyApplied = false;
-        }
 
         function handleTimeUp() {
             // Display a message when the time is up
@@ -103,7 +92,8 @@
         }
 
         function displayExam() {
-            var htmlCode = '<iframe id="examFrame" class="iframe-container" src="https://docs.google.com/forms/d/e/1FAIpQLSe1UzHC7fFelc1ET1pkIw06cgXhV6c37xYW3Vt-0wzNRzlF_A/viewform?embedded=true"></iframe>';
+            var htmlCode = '<iframe id="examFrame" class="iframe-container" src="https://docs.google.com/forms/d/e/1FAIpQLScRLOa9w2X2MWYrXXL4b6SODn4F1sKlfU-gKog0p1upWlsqRA/viewform?embedded=true"></iframe>';
+            
         
             
             var element = document.getElementById('formContainer');
